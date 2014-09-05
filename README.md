@@ -7,6 +7,8 @@ The bootstrap datepicker sucks when you have to select a date from the long past
 
 A better solution is an datepicker with 3 dropdowns (Year, Month, Day)
 
+!(http://i61.tinypic.com/24vnn8y.png)
+
 Usage
 -----
 
