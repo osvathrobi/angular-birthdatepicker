@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    </head>
+    <body ng-app="demoApp">
+
+        <script src="bower_components/angular/angular.js"></script>
+
+        <script src="app.js"></script>
+        <script src="birthdatepicker.js"></script>
+
+        <div class="container">
+            <h2>Birthday Picker</h2>
+            <div ng-controller="main" style="text-align:center;">
+                <label>Your birthday</label>
+                <input type="text" birthdatepicker ng-model="birthday"/>
+
+                <hr />
+
+                <label>Your moms birthday</label>
+                <input type="text" birthdatepicker ng-model="birthday2"/>
+
+                <hr />
+
+                <h3>Usage</h3>
+                <pre>&#60;input type="text" birthdatepicker ng-model="birthday" /&#62;</pre>
+            </div>
+        </div>
+
+    </body>
+</html>
