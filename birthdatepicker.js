@@ -11,7 +11,7 @@ angular.module('angular-birthdatepicker', [])
 
         // store as a UTC date as we do not want changes with timezones        
         var d = new Date(Date.UTC(date.year, (parseInt(date.month, 10) - 1), date.day));
-        console.log('checkinggg', date, d);
+        //console.log('checkinggg', date, d);
         return d && ((d.getMonth() + 1) === date.month && d.getDate() === Number(date.day));
     }
 
@@ -19,7 +19,7 @@ angular.module('angular-birthdatepicker', [])
     function changeDate(date) {
         var d = new Date(Date.UTC(date.year, parseInt(date.month, 10) - 1, date.day));
 
-        console.log('Changind date to', d);
+        //console.log('Changind date to', d);
 
         date.year = d.getFullYear();
         date.month = d.getMonth() + 1;
@@ -70,13 +70,13 @@ angular.module('angular-birthdatepicker', [])
 
     return {
         checkDate: function(date) {
-            console.log('checkDate()', date);
+            //console.log('checkDate()', date);
 
             if (!date.day || !date.month || !date.year) {
                 return false;
             }
 
-            console.log('validateDate()', validateDate(date));
+            //console.log('validateDate()', validateDate(date));
 
             if (validateDate(date)) {
                 // update the model when the date is correct
@@ -118,7 +118,7 @@ angular.module('angular-birthdatepicker', [])
                     }
 
                     $scope.$watch('model', function(newDate, oldDate) {
-                        console.log('model changed', newDate, oldDate);
+                        //console.log('model changed', newDate, oldDate);
 
                         if (!newDate) {
                             var td = new Date();
@@ -127,7 +127,7 @@ angular.module('angular-birthdatepicker', [])
                         }
 
                         var d = newDate.split(".");
-                        console.log(d);
+                        //console.log(d);
 
                         $scope.dateFields.day = parseInt(d[0], 10);
                         $scope.dateFields.month = parseInt(d[1], 10);
@@ -139,17 +139,17 @@ angular.module('angular-birthdatepicker', [])
                         for (var i = 0; i < n; i++) {
                             $scope.days.push(i + 1);
                         }
-                        console.log(n, $scope.days);
+                        //console.log(n, $scope.days);
                     });
 
                     // validate that the date selected is accurate
                     $scope.checkDate = function() {
-                        console.log('Scope checking date');
+                        //console.log('Scope checking date');
 
                         // update the date or return false if not all date fields entered.
                         var date = angular.copy(utils.checkDate($scope.dateFields));
 
-                        console.log('date is', date);
+                        //console.log('date is', date);
                         if (date) {
                             $scope.dateFields = date;
                             $scope.model = ((date.day >= 10) ? date.day : ("0" + date.day)) + "." + ((date.month >= 10) ? date.month : ("0" + date.month)) + "." + date.year;
