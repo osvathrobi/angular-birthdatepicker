@@ -9,6 +9,12 @@ A better solution is an old-school datepicker with 3 dropdowns (Year, Month, Day
 
 ![alt text](http://i61.tinypic.com/24vnn8y.png)
 
+Demo
+-----
+
+http://ready2run.ro/angular-birthdatepicker/demo/demo.html
+
+
 Usage
 -----
 
